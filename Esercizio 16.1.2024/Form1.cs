@@ -25,6 +25,7 @@ namespace Esercizio_16._1._2024
         private void Form1_Load(object sender, EventArgs e)
         {
             listVoti = new List<voti>();
+        
         }
 
         private void button1_Click(object sender, EventArgs e)
