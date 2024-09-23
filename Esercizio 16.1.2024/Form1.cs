@@ -34,11 +34,30 @@ namespace Esercizio_16._1._2024
             string materia = textBox2.Text;
             string classe = textBox3.Text;
             int voto = Convert.ToInt32(textBox4.Text);
+            if (nomestudente=="")
+            {
+                MessageBox.Show("Inserisci nome studente");
+            }
+            else if (materia == "")
+            {
+                MessageBox.Show("Inserisci materia");
+            }
+            else if (classe == "")
+            {
+                MessageBox.Show("Inserisci classe");
+            }
+            else if (!int.TryParse(textBox4.Text, out voto) || voto < 0 || voto > 10) 
+            {
+                MessageBox.Show("Inserisci un voto valido (un numero tra 0 e 10)");
+            }
+            else
+            {
+                voti voti = new voti(nomestudente, materia, classe, voto);
+                listVoti.Add(voti);
 
-            voti voti = new voti(nomestudente, materia, classe, voto);
-            listVoti.Add(voti);
-
-            listBox1.Items.Add(voti.Nomestudente +"; "+ voti.Materia + "; " + voti.Classe + "; " + voti.Voto) ;
+                listBox1.Items.Add(voti.Nomestudente + "; " + voti.Materia + "; " + voti.Classe + "; " + voti.Voto);
+                MessageBox.Show("Inserimento con successo");
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
