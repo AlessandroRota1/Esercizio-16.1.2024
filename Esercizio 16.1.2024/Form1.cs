@@ -113,40 +113,61 @@ namespace Esercizio_16._1._2024
 
             // Variabile per verificare se abbiamo trovato lo studente
             bool trovato = false;
-
-            // Scorriamo tutta la lista per trovare lo studente con il nome da modificare
-            for (int i = 0; i < listVoti.Count; i++)
+            if (vecchionomestudente == "")
             {
-                // Se il nome dello studente nella lista corrisponde al nome da modificare
-                if (listVoti[i].Nomestudente == vecchionomestudente)
-                {
-                    // Modifica i valori dell'elemento trovato
-                    listVoti[i].Nomestudente = nuovonomestudente;
-                    listVoti[i].Materia = nuovamateria;
-                    listVoti[i].Classe = nuovaclasse;
-                    listVoti[i].Voto = nuovovoto;
-
-                    // Aggiorna la ListBox nello stesso indice
-                    listBox1.Items[i] = $"{nuovonomestudente}; {nuovamateria}; {nuovaclasse}; {nuovovoto}";
-
-                    // Imposta la variabile a true per indicare che lo studente è stato trovato
-                    trovato = true;
-
-                    // Esci dal ciclo perché lo studente è stato trovato e modificato
-                    break;
-                }
+                MessageBox.Show("Inserisci vecchio nome studente");
             }
-
-            // Mostra un messaggio di conferma o di errore se non è stato trovato
-            if (trovato)
+            else if (nuovonomestudente == "")
             {
-                MessageBox.Show("Modifica effettuata con successo!");
+                MessageBox.Show("Inserisci nuovo nome studente");
+            }
+            else if (nuovamateria == "")
+            {
+                MessageBox.Show("Inserisci nuova materia");
+            }
+            else if (nuovaclasse == "")
+            {
+                MessageBox.Show("Inserisci nuova classe");
+            }
+            else if (!int.TryParse(textBox9.Text, out nuovovoto) || nuovovoto < 0 || nuovovoto > 10)
+            {
+                MessageBox.Show("Inserisci un voto valido (un numero tra 0 e 10)");
             }
             else
             {
-                MessageBox.Show("Studente non trovato.");
-            }
+                // Scorriamo tutta la lista per trovare lo studente con il nome da modificare
+                for (int i = 0; i < listVoti.Count; i++)
+                {
+                    // Se il nome dello studente nella lista corrisponde al nome da modificare
+                    if (listVoti[i].Nomestudente == vecchionomestudente)
+                    {
+                        // Modifica i valori dell'elemento trovato
+                        listVoti[i].Nomestudente = nuovonomestudente;
+                        listVoti[i].Materia = nuovamateria;
+                        listVoti[i].Classe = nuovaclasse;
+                        listVoti[i].Voto = nuovovoto;
 
+                        // Aggiorna la ListBox nello stesso indice
+                        listBox1.Items[i] = $"{nuovonomestudente}; {nuovamateria}; {nuovaclasse}; {nuovovoto}";
+
+                        // Imposta la variabile a true per indicare che lo studente è stato trovato
+                        trovato = true;
+
+                        // Esci dal ciclo perché lo studente è stato trovato e modificato
+                        break;
+                    }
+                }
+
+                // Mostra un messaggio di conferma o di errore se non è stato trovato
+                if (trovato)
+                {
+                    MessageBox.Show("Modifica effettuata con successo!");
+                }
+                else
+                {
+                    MessageBox.Show("Studente non trovato.");
+                }
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
