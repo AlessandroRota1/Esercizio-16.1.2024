@@ -57,6 +57,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -309,11 +310,23 @@
             this.textBox11.Size = new System.Drawing.Size(103, 20);
             this.textBox11.TabIndex = 28;
             // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(796, 529);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(326, 41);
+            this.button7.TabIndex = 29;
+            this.button7.Text = "Apri file";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 621);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button6);
@@ -382,6 +395,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button button7;
     }
 }
 

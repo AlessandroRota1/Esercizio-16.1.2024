@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -229,6 +231,13 @@ namespace Esercizio_16._1._2024
             {
                 MessageBox.Show("Studente non trovato!");
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+                string percorso = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), fileName); //Dichiarazione percorso (variabile necessaria per il processo di apertura del file)
+                Process.Start(percorso); //Avvio del processo "percorso"
         }
     }
     class voti
