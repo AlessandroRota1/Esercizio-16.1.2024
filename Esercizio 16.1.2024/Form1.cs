@@ -209,6 +209,27 @@ namespace Esercizio_16._1._2024
             }
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string nome = textBox11.Text;
+            bool trovato = false;
+            
+            for (int i = 0;i < listBox1.Items.Count;i++)
+            {
+                if (nome == listVoti[i].Nomestudente)
+                {
+                    listBox1.SelectedIndex = i;
+                    trovato = true;
+                    break;
+                }
+            }
+
+            if (trovato == false)
+            {
+                MessageBox.Show("Studente non trovato!");
+            }
+        }
     }
     class voti
     {

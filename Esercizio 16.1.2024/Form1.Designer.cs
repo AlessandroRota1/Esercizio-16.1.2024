@@ -54,6 +54,9 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -122,6 +125,7 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(39, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 42);
@@ -132,6 +136,7 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(205, 248);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(82, 42);
@@ -142,6 +147,7 @@
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(796, 429);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(327, 44);
@@ -152,6 +158,7 @@
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(39, 455);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 41);
@@ -170,6 +177,7 @@
             // 
             // button5
             // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(796, 479);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(327, 44);
@@ -274,11 +282,41 @@
             this.textBox10.Size = new System.Drawing.Size(100, 20);
             this.textBox10.TabIndex = 25;
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(426, 455);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(71, 40);
+            this.button6.TabIndex = 26;
+            this.button6.Text = "Ricerca:";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(426, 405);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(128, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Inserisci nome da cercare";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(428, 428);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(103, 20);
+            this.textBox11.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 621);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox9);
@@ -341,6 +379,9 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox11;
     }
 }
 
